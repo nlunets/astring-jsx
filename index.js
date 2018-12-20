@@ -29,6 +29,10 @@ var generator = Object.assign({
       this[attr.type](attr, state);
     }
   },
+  JSXText: function JSXText(node, state) {
+      var output = state.output;
+      output.write(node.value);
+  },
   // </div>
   JSXClosingElement: function JSXOpeningElement(node, state) {
     var output = state.output;
